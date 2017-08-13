@@ -8,7 +8,7 @@
   "license": "MIT",
   "scripts": {
     "test": "jest --watch --notify",
-    "ci-test": "jest"
+    "ci-test": "jest --coverage"
   },
   "dependencies": {
     "babylon": "6.17.4"
