@@ -5,5 +5,8 @@
   "main": "index.js",
   "repository": "git@github.com:ovidiubute/react-dag.git",
   "author": "Ovidiu Bute <ovidiu.bute@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "babylon": "6.17.4"
+  }
 }
