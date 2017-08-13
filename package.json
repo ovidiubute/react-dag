@@ -6,7 +6,20 @@
   "repository": "git@github.com:ovidiubute/react-dag.git",
   "author": "Ovidiu Bute <ovidiu.bute@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "test": "jest --watch --notify",
+    "ci-test": "jest"
+  },
   "dependencies": {
     "babylon": "6.17.4"
+  },
+  "devDependencies": {
+    "jest": "20.0.4"
+  },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "<rootDir>/__tests__/resources"
+    ],
+    "testEnvironment": "node"
   }
 }
