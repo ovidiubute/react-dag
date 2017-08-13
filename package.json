@@ -1,0 +1,9 @@
+{
+  "name": "react-dag",
+  "version": "0.0.1",
+  "description": "Constructs a directed acyclic dependency graph from JSX code",
+  "main": "index.js",
+  "repository": "git@github.com:ovidiubute/react-dag.git",
+  "author": "Ovidiu Bute <ovidiu.bute@gmail.com>",
+  "license": "MIT"
+}
