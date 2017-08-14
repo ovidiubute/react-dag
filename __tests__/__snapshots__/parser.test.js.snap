@@ -90,6 +90,79 @@ Array [
 ]
 `;
 
+exports[`getJsxElementNames-alias-imports.jsx 1`] = `
+Array [
+  "div",
+  "UiButton",
+  "div",
+]
+`;
+
+exports[`getJsxElementNames-destructured-imports.jsx 1`] = `
+Array [
+  "div",
+  "Button",
+  "Tooltip",
+  "value",
+  "span",
+  "span",
+  "Tooltip",
+  "Modal",
+  "content",
+  "div",
+]
+`;
+
+exports[`getJsxElementNames-no-react.js 1`] = `Array []`;
+
+exports[`getJsxElementNames-other-imports.jsx 1`] = `
+Array [
+  "div",
+  "background",
+  "Button",
+  "Tooltip",
+  "style",
+  "value",
+  "span",
+  "span",
+  "Tooltip",
+  "Modal",
+  "content",
+  "div",
+]
+`;
+
+exports[`getJsxElementNames-simple.jsx 1`] = `
+Array [
+  "div",
+  "Tooltip",
+  "value",
+  "span",
+  "span",
+  "Tooltip",
+  "div",
+]
+`;
+
+exports[`getJsxElementNames-wildcard-imports.jsx 1`] = `
+Array [
+  "div",
+  "UiComponents",
+  "Button",
+  "UiComponents",
+  "Tooltip",
+  "value",
+  "span",
+  "span",
+  "UiComponents",
+  "Tooltip",
+  "UiComponents",
+  "Modal",
+  "content",
+  "div",
+]
+`;
+
 exports[`parse-alias-imports.jsx 1`] = `
 Node {
   "comments": Array [],

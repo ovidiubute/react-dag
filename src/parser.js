@@ -13,6 +13,10 @@ const parse = sourceCode => {
   });
 };
 
+const getJsxElementNames = ast => {
+  return ast.tokens.filter(token => token.type.label === 'jsxName').map(token => token.value);
+};
+
 /**
  * Parse an AST and return a list of all JavaScript imports.
  * This function will exclude any import that ends with 
@@ -51,4 +55,5 @@ const jsModuleImport = theImport => {
 module.exports = {
   parse,
   getImports,
+  getJsxElementNames,
 };

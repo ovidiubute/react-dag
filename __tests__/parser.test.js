@@ -29,4 +29,15 @@ describe('parser', () => {
       });
     });
   });
+
+  describe('.getJsxElementNames', () => {
+    Object.keys(sources).forEach(testFilename => {
+      it(`should match resources/${testFilename} snapshot`, () => {
+        const ast = parser.parse(sources[testFilename]);
+        expect(parser.getJsxElementNames(ast)).toMatchSnapshot(
+          `getJsxElementNames-${testFilename}`
+        );
+      });
+    });
+  });
 });
