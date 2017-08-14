@@ -9,7 +9,7 @@ const babylon = require('babylon');
 const parse = sourceCode => {
   return babylon.parse(sourceCode, {
     sourceType: 'module',
-    plugins: ['jsx', 'classProperties'],
+    plugins: ['jsx', 'classProperties', 'objectRestSpread'],
   });
 };
 
