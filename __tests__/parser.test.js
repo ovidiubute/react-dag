@@ -16,7 +16,7 @@ describe('parser', () => {
   describe('.parse', () => {
     Object.keys(sources).forEach(testFilename => {
       it(`should match resources/${testFilename} snapshot`, () => {
-        expect(parser.parse(sources[testFilename])).toMatchSnapshot();
+        expect(parser.parse(sources[testFilename])).toMatchSnapshot(`parse-${testFilename}`);
       });
     });
   });
@@ -25,7 +25,7 @@ describe('parser', () => {
     Object.keys(sources).forEach(testFilename => {
       it(`should match resources/${testFilename} snapshot`, () => {
         const ast = parser.parse(sources[testFilename]);
-        expect(parser.getImports(ast)).toMatchSnapshot();
+        expect(parser.getImports(ast)).toMatchSnapshot(`getImports-${testFilename}`);
       });
     });
   });

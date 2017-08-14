@@ -14,7 +14,9 @@ const parse = sourceCode => {
 };
 
 /**
- * Parse an AST and return a list of all the imports.
+ * Parse an AST and return a list of all JavaScript imports.
+ * This function will exclude any import that ends with 
+ * an extension different from .js, .jsx and no extension.
  * @param {Object} ast AST as obtained from Babylon
  * @return {Import[]} List of imports
  */
@@ -36,17 +38,14 @@ const getImports = ast => {
       }
 
       return accum;
-    }, []);
+    }, [])
+    .filter(jsModuleImport);
 };
 
-const filterJavaScript = imports => {
-  return imports.filter(theImport => {
-    return (
-      !theImport.path.includes('.') ||
-      theImport.path.includes('.jsx') ||
-      theImport.path.includes('.js')
-    );
-  });
+const jsModuleImport = theImport => {
+  return !theImport.path.match(
+    /\.(css|less|sass|jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$/i
+  );
 };
 
 module.exports = {
