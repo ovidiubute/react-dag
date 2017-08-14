@@ -30,13 +30,23 @@ const getImports = ast => {
         }
 
         accum.push({
-          importName,
-          importPath: node.source.value,
+          name: importName,
+          path: node.source.value,
         });
       }
 
       return accum;
     }, []);
+};
+
+const filterJavaScript = imports => {
+  return imports.filter(theImport => {
+    return (
+      !theImport.path.includes('.') ||
+      theImport.path.includes('.jsx') ||
+      theImport.path.includes('.js')
+    );
+  });
 };
 
 module.exports = {
