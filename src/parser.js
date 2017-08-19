@@ -24,7 +24,9 @@ const parse = sourceCode => {
  * @return {String[]} List of JSX element names
  */
 const getJsxElementNames = ast => {
-  return ast.tokens.filter(token => token.type.label === 'jsxName').map(token => token.value);
+  return ast.tokens
+    .filter(token => token.type.label === 'jsxName')
+    .map(token => token.value);
 };
 
 /**
