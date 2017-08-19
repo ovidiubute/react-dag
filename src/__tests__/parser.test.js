@@ -1,11 +1,11 @@
-const parser = require('../src/parser');
+const parser = require('../parser');
 const fs = require('fs');
 const path = require('path');
 
-const resources = fs.readdirSync(path.resolve('__tests__', 'resources'));
+const resources = fs.readdirSync(path.resolve('src', '__tests__', 'resources'));
 const sources = resources.reduce((accum, testFilename) => {
   const sourceCode = fs.readFileSync(
-    path.resolve('__tests__', 'resources', testFilename),
+    path.resolve('src', '__tests__', 'resources', testFilename),
     {
       encoding: 'utf8',
     }

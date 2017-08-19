@@ -18,7 +18,7 @@
   },
   "jest": {
     "testPathIgnorePatterns": [
-      "<rootDir>/__tests__/resources"
+      "<rootDir>/src/__tests__/resources"
     ],
     "testEnvironment": "node"
   }
